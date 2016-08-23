@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="QA">
+<head>
+    <title>MEAN Add Questions</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src='main.js'></script>
+
+</head>
+
+<body ng-controller="QAController">
+  <div class="container">
+  <div id="todo-form" class="row">
+      <div class="col-sm-8 col-sm-offset-2 text-center">
+        <form> 
+          <div class="form-group">
+              <input type="text" class="form-control input-lg text-center" placeholder="Complete Question" ng-model='formData.text'>
+              <input type="text" class="form-control input-lg text-center" placeholder="First Option" ng-model='formData.ans1'>
+              <input type="text" class="form-control input-lg text-center" placeholder="Second Option" ng-model='formData.ans2'>
+              <input type="text" class="form-control input-lg text-center" placeholder="Third Option" ng-model='formData.ans3'>
+              <input type="text" class="form-control input-lg text-center" placeholder="Fourth Option" ng-model='formData.ans4'>
+              <input type="number" class="form-control input-lg text-center" placeholder="Answer Option Number" ng-model='formData.Ans'>
+              <button type="submit" ng-click="createQuestion()">Add New Question</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div>
+      <p>
+        {{result}}
+      </p>
+    </div>
+    
+    <!-- <div id="todo-list" class="row">
+     <div class="col-sm-4 col-sm-offset-4">
+            <div class="checkbox" ng-repeat="todo in todos">
+                  <input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }}
+            </div>      
+    </div>   
+</div> 
+  </div> -->
+</body
+
+</html>

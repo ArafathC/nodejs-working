@@ -1,0 +1,59 @@
+<!doctype html>
+<html ng-app="QAretrieve">
+<head>
+    <title>MEAN QA Application</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src='main.js'></script>
+
+</head>
+
+<body ng-controller="QARetrieveController">
+  <div class="container" ng-cloak>
+  <div id="todo-form" class="row">
+      <form name="QAForm" >
+        <label>{{question.text}}</label><br/>
+        <!-- </1><label><input type="checkbox" ng-model="answerModel.answer1"> : {{question.ans1}} </label><br/>
+        <label><input type="checkbox" ng-model="answerModel.answer2"> : {{question.ans2}} </label><br/>
+        <label><input type="checkbox" ng-model="answerModel.answer3"> : {{question.ans3}} </label><br/>
+        <label><input type="checkbox" ng-model="answerModel.answer4"> : {{question.ans4}} </label><br/> -->
+        
+        <div class="radio">
+            <label>
+                <input type="radio" name="QAselection" value="1" ng-model="answerModel.answer"> : {{question.ans1}} 
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="QAselection" value="2" ng-model="answerModel.answer"> : {{question.ans2}} 
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="QAselection" value="3" ng-model="answerModel.answer"> : {{question.ans3}} 
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="QAselection" value="4" ng-model="answerModel.answer"> : {{question.ans4}} 
+            </label>
+        </div>
+        <button type="submit" ng-click="verifyAnswer()">Check your Answer!</button>
+      </form>
+    </div>
+    <div>
+      <p>
+        Selected Answer is : {{answerModel.answer}}
+      </p>
+      <p>
+        {{AnswerMessage}}
+      </p>
+    </div>
+  </div>
+</body
+
+</html>
